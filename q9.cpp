@@ -2,26 +2,24 @@
 using namespace std;
 
 int main() {
-    int n, arr[100], num;
-    int frequency = 0;
+    int arr[5];
+    int *p;
 
-    cout << "Enter the number of elements: ";
-    cin >> n;
+    p = arr;
 
-    cout << "Enter the array elements:\n";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
+    cout << "Enter 5 elements: ";
+
+    for (int i = 0; i < 5; i++) {
+        cin >> *p;
+        p++;
     }
 
-    cout << "Enter the number whose frequency is to be found: ";
-    cin >> num;
+    cout << "The elements are: ";
 
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == num)
-            frequency++;
+    for (int i = 0; i < 5; i++) {
+        cout << arr[i] << " ";
     }
-
-    cout << "Frequency of " << num << " = " << frequency << endl;
 
     return 0;
 }
+

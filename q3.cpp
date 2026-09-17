@@ -2,17 +2,16 @@
 using namespace std;
 
 int main() {
-    int n, arr[5];
+    int num;
+    int *p;
 
-    cout <<"Enter the number of elements: ";
-    cin >> n;
+    cout << "Enter a number: ";
+    cin >> num;
 
-    cout << "Enter the array elements:\n";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-int len= sizeof(arr)/sizeof(arr[0]);
-    cout << "Length of the array = " << len << endl;
+    p = &num;
+
+    cout << "Value of num = " << num << endl;
+    cout << "Address of num = " << p << endl;
 
     return 0;
-} 
+}

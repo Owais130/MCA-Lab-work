@@ -2,21 +2,22 @@
 using namespace std;
 
 int main() {
-    int n, arr[100];
+    char str[100];
+    char *ptr;
 
-    cout << "Enter the number of elements: ";
-    cin >> n;
+    cout << "Enter a string: ";
+    cin.getline(str, 100);
 
-    cout << "Enter the array elements:\n";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
+    ptr = str;
+
+    cout << "String = ";
+
+    while (*ptr != '\0') {
+        cout << *ptr;
+        ptr++;
     }
 
-    cout << "Array in reverse order:\n";
-    for (int i = n - 1; i >= 0; i--) {
-        cout << arr[i] << " ";
-    }
+    cout << endl;
 
     return 0;
 }
-

@@ -2,32 +2,23 @@
 using namespace std;
 
 int main() {
-    int n, arr[100];
-    int positive = 0, negative = 0;
-    int odd = 0, even = 0;
+    int arr[5];
+    int *p;
 
-    cout << "Enter the number of elements: ";
-    cin >> n;
+    cout << "Enter 5 elements: ";
 
-    cout << "Enter the array elements:\n";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
+    p = arr;
 
-        if (arr[i] > 0)
-            positive++;
-        else if (arr[i] < 0)
-            negative++;
-
-        if (arr[i] % 2 == 0)
-            even++;
-        else
-            odd++;
+    for (int i = 0; i < 5; i++) {
+        cin >> *p;
+        p++;
     }
 
-    cout << "Positive numbers = " << positive << endl;
-    cout << "Negative numbers = " << negative << endl;
-    cout << "Even numbers = " << even << endl;
-    cout << "Odd numbers = " << odd << endl;
+    cout << "Array elements are: ";
+
+    for (int i = 0; i < 5; i++) {
+        cout << arr[i] << " ";
+    }
 
     return 0;
 }

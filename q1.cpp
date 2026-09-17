@@ -2,20 +2,18 @@
 using namespace std;
 
 int main() {
-    int n, arr[100];
+    int a, b, sum;
+    int *p1, *p2;
 
-    cout << "Enter the number of elements: ";
-    cin >> n;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
 
-    cout << "Enter the array elements:\n";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+    p1 = &a;
+    p2 = &b;
 
-    cout << "Array elements are:\n";
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-    }
+    sum = *p1 + *p2;
+
+    cout << "Sum = " << sum << endl;
 
     return 0;
 }
