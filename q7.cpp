@@ -1,45 +1,33 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 int main() {
-    double a, b, c;
-    double D, r1, r2;
+    int n, arr[100];
+    int positive = 0, negative = 0;
+    int odd = 0, even = 0;
 
-    cout << "Enter coefficients a, b, c: ";
-    cin >> a >> b >> c;
+    cout << "Enter the number of elements: ";
+    cin >> n;
 
-    if (a == 0) {
-        cout << "This is not a quadratic equation." << endl;
-        return 0;
+    cout << "Enter the array elements:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+
+        if (arr[i] > 0)
+            positive++;
+        else if (arr[i] < 0)
+            negative++;
+
+        if (arr[i] % 2 == 0)
+            even++;
+        else
+            odd++;
     }
 
-    D = b * b - 4 * a * c;
-
-    if (D > 0) {
-        r1 = (-b + sqrt(D)) / (2 * a);
-        r2 = (-b - sqrt(D)) / (2 * a);
-
-        cout << "Two distinct real roots:" << endl;
-        cout << "Root 1 = " << r1 << endl;
-        cout << "Root 2 = " << r2 << endl;
-    }
-    else if (D== 0) {
-        r1 = -b / (2 * a);
-
-        cout << "Two equal real roots:" << endl;
-        cout << "Root 1 = Root 2 = " << r1 << endl;
-    }
-    else {
-        double realPart = -b / (2 * a);
-        double imaginaryPart = sqrt(-D) / (2 * a);
-
-        cout << "Complex roots:" << endl;
-        cout << "Root 1 = " << realPart << " + "
-             << imaginaryPart << "i" << endl;
-        cout << "Root 2 = " << realPart << " - "
-             << imaginaryPart << "i" << endl;
-    }
+    cout << "Positive numbers = " << positive << endl;
+    cout << "Negative numbers = " << negative << endl;
+    cout << "Even numbers = " << even << endl;
+    cout << "Odd numbers = " << odd << endl;
 
     return 0;
 }

@@ -2,28 +2,21 @@
 using namespace std;
 
 int main() {
-    int n;
+    int n, arr[100];
 
-    cout << "Enter n: ";
+    cout << "Enter the number of elements: ";
     cin >> n;
 
-    cout << "Prime numbers between 1 and " << n << " are: ";
-
-    for (int num = 2; num <= n; num++) {
-        bool prime = true;
-
-        for (int i = 2; i <= sqrt(num); i++) {
-            if (num % i == 0) {
-                prime = false;
-                break;
-            }
-        }
-
-        if (prime)
-            cout << num << " ";
+    cout << "Enter the array elements:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
 
-    cout << endl;
+    cout << "Array in reverse order:\n";
+    for (int i = n - 1; i >= 0; i--) {
+        cout << arr[i] << " ";
+    }
 
     return 0;
 }
+

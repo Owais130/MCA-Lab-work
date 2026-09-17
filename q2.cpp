@@ -1,13 +1,19 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-	int a,b;
-	cout<<"enter the number ";
-	cin>>a>>b;
-	while(b!=0){
-		int carry= a&b;
-		a=a^b;
-		b=carry<<1;
-	} cout<<"sum= "<<a;
-	return 0;
+
+int main() {
+    int n, arr[100], sum = 0;
+
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    cout << "Enter the array elements:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+        sum += arr[i];
+    }
+
+    cout << "Sum of array elements = " << sum << endl;
+
+    return 0;
 }

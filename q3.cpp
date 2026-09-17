@@ -2,14 +2,17 @@
 using namespace std;
 
 int main() {
-    double a, b, c, d, e, f, g, result;
+    int n, arr[5];
 
-    cout << "Enter values of a, b, c, d, e, f, g: ";
-    cin >> a >> b >> c >> d >> e >> f >> g;
+    cout <<"Enter the number of elements: ";
+    cin >> n;
 
-    result = (a + b / c * d - e) * (f - g);
-
-    cout << "Result = " << result << endl;
+    cout << "Enter the array elements:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+int len= sizeof(arr)/sizeof(arr[0]);
+    cout << "Length of the array = " << len << endl;
 
     return 0;
-}
+} 
